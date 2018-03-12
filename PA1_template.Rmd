@@ -1,0 +1,97 @@
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
+
+
+## Loading and preprocessing the data
+
+```{r Loading the data, echo=TRUE}
+# Unsipping the data
+unzip("E:/Backup/sush/sush/Coursera/Data Science Specialization/Reproducible Research/Project 1/RepData_PeerAssessment1/activity.zip", exdir = "E:/Backup/Jijo/Jijo/Coursera/Data Science Specialization/Reproducible Research/Project 1/RepData_PeerAssessment1" ) 
+
+# Loading the data
+activity <- read.csv("activity.csv")
+
+#Preprocessing
+str(activity)
+summary(activity)
+activity$date <- as.Date(activity$date)
+
+```
+
+## What is mean total number of steps taken per day?
+
+```{r mean total number of steps}
+library(dplyr)
+library(ggplot2)
+sumSteps <- aggregate(activity$steps ~ activity$date,FUN = sum)
+colnames(sumSteps) <- c("Date","Total_Steps")
+ggplot(sumSteps, aes(Total_Steps)) + geom_histogram(col = "red",bins = 8)
+```
+
+
+```{r average daily activity pattern}
+
+# Mean number of steps
+mean(sumSteps$Total_Steps, na.rm = TRUE) 
+
+# Median number of steps
+median(sumSteps$Total_Steps,na.rm = TRUE)
+
+```
+
+The average mean number of steps taken each day was 10766.19 steps.
+
+The median number of steps taken each day was 10765 steps.
+
+# What is the average daily activity pattern?
+
+## Time Series of averaged number of steps across different intervals
+
+```{r time series}
+meanInterval <- aggregate(steps ~ interval,data = activity, FUN = mean)
+ggplot(meanInterval, aes(x = interval, y = steps)) + geom_line()
+```
+
+
+## Imputing missing values
+We will be imputing the missing values with the mean in each interval. 
+```{r Imputing missing values}
+activity[is.na(activity)] <- tapply(activity$steps, activity$interval,mean,na.rm =TRUE)
+summary(activity)  
+```
+
+## Histogram after imputation
+```{r Histogram after imputation}
+sumSteps2 <- aggregate(activity$steps ~ activity$date , FUN= sum)
+colnames(sumSteps2) <- c("Date","Total_Steps")
+ggplot(sumSteps2, aes(Total_Steps)) + geom_histogram(col = "red",bins = 8, fill = "blue")
+```
+
+## Mean and median number of steps after imputation 
+```{r average daily activity pattern after imputation}
+
+# Mean number of steps
+mean(sumSteps2$Total_Steps, na.rm = TRUE) 
+
+# Median number of steps
+median(sumSteps2$Total_Steps,na.rm = TRUE)
+```
+
+There is no change in the mean of the values since we impputed the missing values with the mean. The median however has increased. 
+
+## Are there differences in activity patterns between weekdays and weekends?
+
+```{r Difference in weekend and weekday patterns}
+activity$weekCategory  <- ifelse(weekdays(activity$date) %in% c("Satuday","Sunday"),"Weekend","Weekday")
+weekPattern <- aggregate(activity$steps ~ activity$interval + activity$weekCategory, FUN= mean)
+colnames(weekPattern) <- c("interval","weekCategory","steps")
+ggplot(weekPattern,aes(x= interval, y = steps), color = weekCategory) + geom_line() +
+  labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps") +
+       facet_wrap(~weekCategory, ncol = 1, nrow=2)
+```
+
+During the weekdays, the person is more active in the early hours of the day and then he is having lighter motion. In the weekends, he is active throughout the daytime.
