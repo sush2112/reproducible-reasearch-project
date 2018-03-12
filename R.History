@@ -1,0 +1,284 @@
+library("swirl")
+swirl()
+submit()
+submit()
+submit()
+View(result3)
+submit()
+cran %>%
+library("swirl")
+library("swirl")
+swirl()
+swirl()
+swirl()
+dist(dataFrame)
+hc <- hclust(distxy)
+plot(hc)
+plot(as.dendrogram(hc))
+abline(h=1.5,col="blue")
+abline(h=0.4,col="red")
+5
+abline(h=0.05,col="red")
+12
+abline(h=0.05,col="green")
+dist(dFsm)
+hc
+heatmap(dataMatrix,col=cm.colors(25))
+heatmap(mt)
+mt
+plot(denmt)
+distmt
+cmat
+points(cx,cy,col=c("red"."orange","purple"),pch=3,cex=2,lwd=2)
+points(cx,cy,col=c("red","orange","purple"),pch=3,cex=2,lwd=2)
+mdist(x,y,cx,cy)
+apply(distTmp,2,which.min)
+points(x,y,pch=19,cex=2,col=cols1[newClust])
+tapply(x,newClust,mean)
+tapply(y,newClust,mean)
+points(newCx,newCy,col=cols1,pch=8,cex=2,lwd=2)
+mdist(x,y,newCx,newCy)
+apply(distTmp2,2,which.min)
+points(x,y,pch=19,cex=2,col=cols1[newClust2])
+tapply(x,newClust2,mean)
+tapply(y,newClust2,mean)
+points(finalCx,finalCy,col=cols1,pch=9,cex=2,lwd=2)
+kmeans(dataFrame,centers = 3)
+kmObj$iter
+plot(x,y,col=kmObj$cluster,pch=19,cex=2)
+points(kmObj$centers,col=c("black","red","green"),pch=3,cex=3,lwd=3)
+plot(x,y,col=kmeans(dataFrame,6)$cluster,pch=19,cex=2)
+plot(x,y,col=kmeans(dataFrame,6)$cluster,pch=19,cex=2)
+plot(x,y,col=kmeans(dataFrame,6)$cluster,pch=19,cex=2)
+head(dataMatrix)
+heatmap(dataMatrix)
+myedit("addPatt.R")
+source("addPatt.R",loacl=TRUE)
+source("addPatt.R",local=TRUE)
+heatmap(dataMatrix)
+mat
+svd(mat)
+matu %*% diag %*% t(matv)
+svd(scale(mat))
+prcomp(scale(mat))
+svd1$v[,1]
+svd1$d
+head(constantMatrix)
+svd2$d
+svd2$v[,1:2]
+svd2$d
+dim(faceData)
+a1 <- svd1$u[,1] %*% svd1$d[1] %*% t(svd1$v[,1])
+a1 <- svd1$u[,1] * svd1$d[1] * t(svd1$v[,1])
+a1 <- (svd1$u[,1] * svd1$d[1]) %*% t(svd1$v[,1])
+myImage(a1)
+a2 <- svd1$u[,1:2] %*% diag(svd1$d[1:2]) %*% t(svd1$v[,1:2])
+myImage(a2)
+myImage(svd1$u[,1:5] %*% diag(svd1$d[1:5]) %*% t(svd1$v[,1:5]))
+myImage(svd1$u[,1:10] %*% diag(svd1$d[1:10]) %*% t(svd1$v[,1:10]))
+library("rJava", lib.loc="~/R/win-library/3.4")
+library("rJAva")
+library("rJava")
+library(swirl)
+swirl()
+library(readr)
+parse_number("class5")
+submit()
+View(students3)
+submit()
+submit()
+students4
+library(swirl)
+swirl()
+pnorm(30+z,mean = 32,lower.tail = FALSE)
+pnorm(30+z,mean = 32,sd=1,lower.tail = FALSE)
+pnorm(30+z*2,mean = 32,sd=2,lower.tail = FALSE)
+power.t.test(n = 16, delta = 2 / 4, sd=1, type = "one.sample", alt = "one.sided")$power
+power.t.test(n = 16, delta = 2 , sd=4, type = "one.sample", alt = "one.sided")$power
+power.t.test(n = 16, delta = 100 , sd=200, type = "one.sample", alt = "one.sided")$power
+power.t.test(power = .8, delta = 2 / 4, sd=1, type = "one.sample", alt = "one.sided")$n
+power.t.test(power = .8, delta = 2 , sd=4, type = "one.sample", alt = "one.sided")$n
+power.t.test(power = .8, delta = 100 , sd=200, type = "one.sample", alt = "one.sided")$n
+power.t.test(power = .8,  sd=1, n=26, type = "one.sample", alt = "one.sided")$n
+power.t.test(power = .8,  n=26, sd=1, type = "one.sample", alt = "one.sided")$n
+power.t.test(power = .8,  n=26, sd=1, type = "one.sample", alt = "one.sided")$delta
+power.t.test(power = .8,  n=27, sd=1, type = "one.sample", alt = "one.sided")$delta
+library(swirl)
+swirl()
+head(pValues)
+sum(pValues<.05)
+sum(p.adjust(pValues<.05,method = "bonferroni"))
+sum(p.adjust(pValues,method = "bonferroni")<.05)
+sum(p.adjust(pValues,method = "BH")<.05)
+tail(trueStatus)
+table(pValues2<.05,trueStatus)
+24/500*100
+24/500
+table(p.adjust(pValues2,method = "bonferroni")<.05,trueStatus)
+table(p.adjust(pValues2,method = "BH")<.05,trueStatus)
+qt(.975,8)
+1100+c(-1,1)*qt(.975,8)*10
+1100+c(-1,1)*qt(.95,8)*10
+qt(.95,8)
+6/qt(.975,8)
+library(swirl)
+swirl()
+sum(x*p(x))
+sum((1:6)*(1/6))
+print(g2)
+head(sh)
+length(sh)
+nh
+median(resampledMeans)
+median(resampledMedians)
+median(sh)
+sam <- sample(fh,nh*B,replace = TRUE)
+resam <- matrix(sam,B,nh)
+meds <- apply(resam,1,median)
+median(fh)-median(meds)
+sd(meds)
+sd(resampledMedians)
+quantile(resampledMedians,c(.025,.975))
+quantile(meds,c(.025,.975))
+dim(InsectSprays)
+names(InsectSprays)
+range(Bdata$count)
+range(data$count)
+range(Cdata$count)
+BCcounts
+group
+testStat
+obs <- testStat(BCcounts,group)
+obs
+mean(Bdata$count-Cdata$count)
+sample(group)
+perms M- sapply(1:10000,function(i)testStat(BCcounts,sample(group))
+perms <- sapply(1:10000,function(i)testStat(BCcounts,sample(group))
+)
+mean(perms>obs)
+testStat(DEcounts,group)
+perms <- sapply(1 : 10000, function(i) testStat(DEcounts,sample(group)))
+library(swirl)
+swirl
+swirl()
+str(mpg)
+qplot(displ,hwy,mpg)
+qplot(displ,hwy,data = mpg)
+qplot(displ,hwy,data = mpg, col=drv)
+qplot(displ, hwy, data = mpg, color = drv)
+library(swirl)
+swirl()
+head(trees)
+---
+title: "Statistical Inference Project"
+output: html_document
+author: "Jijo Jose"
+---
+## R Markdown
+Part 1: Simulation Exercise Instructionsless
+In this project you will investigate the exponential distribution in R and compare it with the Central Limit Theorem. The exponential distribution can be simulated in R with rexp(n, lambda) where lambda is the rate parameter. The mean of exponential distribution is 1/lambda and the standard deviation is also 1/lambda. Set lambda = 0.2 for all of the simulations. You will investigate the distribution of averages of 40 exponentials. Note that you will need to do a thousand simulations.
+Illustrate via simulation and associated explanatory text the properties of the distribution of the mean of 40 exponentials. You should
+Show the sample mean and compare it to the theoretical mean of the distribution.
+Show how variable the sample is (via variance) and compare it to the theoretical variance of the distribution.
+Show that the distribution is approximately normal.
+In point 3, focus on the difference between the distribution of a large collection of random exponentials and the distribution of a large collection of averages of 40 exponentials.
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Set the values and the seed
+```{r Values and seed}
+set.seed(72)
+lambda = 0.2
+n = 40
+num_simulations = 1000
+mns = NULL
+```
+##Run the Simulations
+```{r Simulations}
+for (i in 1:1000) mns = c(mns,mean(rexp(n,lambda)))
+```
+# Sample mean vs Theoretical Mean
+## Sample Mean
+```{r Sample Mean}
+mean(mns)
+```
+## Theoretical Mean
+```{r Theoretical Mean}
+1/lambda
+```
+## Difference of sample mean and Theoretical MEan
+```{r Difference}
+abs(mean(mns)-1/lambda)
+```
+## Plot
+```{r plot}
+library(ggplot2)
+ggplot(data.frame(y=mns),aes(x=y)) + geom_histogram(aes(y=..density..),binwidth = 0.2,col='blue')+labs(title="Distribution of sample means",x="Simulation means", y= "Frequency")
+```
+# Variance of sample mean Vs Theoretical Variance
+## Sample Variance
+```{r Sample Variance}
+var(mns)
+```
+##Theoretical variance
+```{r Theretical Variance}
+(1/lambda)^2/n
+```
+#Distribution of Sample Means
+```{r sample mean distribution}
+hist(mns, breaks = 50)
+```
+library(swirl)
+swirl()
+ones <- rep(1,nrow(galton))
+lm(child~ones+parent-1,galton)
+lm(child~parent,galton)
+lm(child~1,galton)
+head(trees)
+fit <- lm(Volume ~ Girth + Height + Constant -1 , tress)
+fit <- lm(Volume ~ Girth + Height + Constant -1 , trees)
+trees2 <- eliminate("Girth", trees)
+head(trees2)
+fit2 <- lm(Volume ~ Height + Constant -1,trees2)
+lapply(list(fit,fit2),coef)
+all <- lm(Fertility ~.,swiss)
+summary(all)
+summary(lm(Fertility~Agriculture,swiss))
+cor(swiss$Examination,swiss$Education)
+cor(swiss$Agriculture,swiss$Education)
+makelms()
+ec <- sum(swiss$Examination,swiss$Catholic)
+ec <- swiss$Examination+swiss$Catholic
+efit <- lm(Fertility ~ . + ec,swiss)
+efit$coefficients - all$coefficients
+all$coefficients-efit$coefficients
+6
+dim(InsectSprays)
+head(InsectSprays,15)
+sA
+summary(sB)
+summary(InsectSprays[,2])
+sapply(InsectSprays,class)
+fit <- lm(count~spray,InsectSprays)
+summary(fit)$coef
+est <- summary(fit)$coef[,1]
+mean(sA)
+mean(sB)
+nfit <- lm(count~spray-1,InsectSprays)
+summary(nfit)$coef
+relevel(InsectSprays$spray,"C")
+spray2 <- relevel(InsectSprays$spray,"C")
+fit2 <- lm(count~spray2,InsectSprays)
+summary(fit2)$coef
+mean(sC)
+(fit$coefficients[2]-fit$coefficients[3])/1.6011
+fit$coef[2]-fit$coef[3])/1.6011
+(fit$coef[2]-fit$coef[3])/1.6011
+dim(hunger)
+948
+names(hunger)
+fit <- lm(Numeric~Year,hunger)
+summary(fit)$coef
+setwd("E:/Backup/Jijo/Jijo/Coursera/Data Science Specialization/Reproducible Research/Project 1/RepData_PeerAssessment1")
+act <- read.csv("activity.csv")
+library(dplyr)
+str(act)
+setwd("E:/Backup/Jijo/Jijo/Coursera/Data Science Specialization/Reproducible Research/Project 1/RepData_PeerAssessment1")
